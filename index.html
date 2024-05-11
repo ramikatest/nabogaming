@@ -14,7 +14,7 @@
             var ram = navigator.deviceMemory; // Get device RAM in GB
 
             if (/android/i.test(userAgent)) {
-                if (ram < 3) {
+                if (ram < 6) {
                     alert("Your device has less than 3GB of RAM. PUBG Mobile may not run smoothly. Do you still want to proceed?");
                     // Proceed to Samsung Galaxy Store link
                     window.location.href = "https://galaxy.store/pubg_mobile";
