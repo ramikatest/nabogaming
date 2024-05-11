@@ -25,10 +25,20 @@
             } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
                 // Proceed to Apple App Store link
                 window.location.href = "https://apps.apple.com/us/app/pubg-mobile/id1330123889";
+            } else if (/Windows/i.test(userAgent)) {
+                // Proceed to Windows link
+                window.location.href = "https://www.pubg.com/en-us/download/";
+            } else if (/Linux/i.test(userAgent)) {
+                // Proceed to Linux link
+                window.location.href = "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/";
+            } else if (/Mac/i.test(userAgent)) {
+                // Proceed to Mac link
+                window.location.href = "https://store.steampowered.com/app/578080/PLAYERUNKNOWNS_BATTLEGROUNDS/";
             } else {
-                alert("Sorry, PUBG Mobile is only available for Android and iOS devices. Please use a compatible device to download the game.");
+                alert("Sorry, PUBG Mobile is only available for Android, iOS, Windows, Linux, and Mac devices. Please use a compatible device to download the game.");
             }
         });
     </script>
 </body>
 </html>
+
