@@ -11,10 +11,19 @@
     <script>
         document.getElementById("downloadButton").addEventListener("click", function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var ram = navigator.deviceMemory; // Get device RAM in GB
 
             if (/android/i.test(userAgent)) {
-                window.location.href = "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en";
+                if (ram < 3) {
+                    alert("Your device has less than 3GB of RAM. PUBG Mobile may not run smoothly. Do you still want to proceed?");
+                    // Proceed to Samsung Galaxy Store link
+                    window.location.href = "https://galaxy.store/pubg_mobile";
+                } else {
+                    // Proceed to Google Play Store link
+                    window.location.href = "https://play.google.com/store/apps/details?id=com.tencent.ig&hl=en";
+                }
             } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+                // Proceed to Apple App Store link
                 window.location.href = "https://apps.apple.com/us/app/pubg-mobile/id1330123889";
             } else {
                 alert("Sorry, PUBG Mobile is only available for Android and iOS devices. Please use a compatible device to download the game.");
